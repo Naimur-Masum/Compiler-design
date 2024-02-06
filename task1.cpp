@@ -2,21 +2,23 @@
 using namespace std;
 
 void output(){
-    bool f=1;
+    int  f=0;
     string s;
     cin>>s;
+    //string s1={};
     for(int i=0;i<s.size();i++){
-        if(s[i]>='A' && s[i]<='Z'){
-            cout<<"not numerical"<<endl;
-            f=0;
-            break;
+        if( s[i]>'9' && s[i]<='~'){
+
+            f++;
+
         }
 
     }
-    if(f){
-        cout<<"numeric constant"<<endl;
+    if(f>0){
+        cout<<" not numerical"<<endl;
 
     }
+    else cout<<"numerical"<<endl;
 }
 int main(){
 
